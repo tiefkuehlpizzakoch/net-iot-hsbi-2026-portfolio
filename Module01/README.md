@@ -16,7 +16,8 @@ Module description
 <a id="lg1"></a>
 ### LG1 — `<keyword>`
 
-I worked in collaboration with Maxim Sukhonosov. Explain how this class works — learning goals as the contract, negotiable tasks, evidence in a portfolio — and start your own portfolio with a note on what you already know, what you expect, and who your pod is.
+I worked in collaboration with Maxim Sukhonosov. In this class the focus is fully on learning the basics of networking, getting to know the OSI model and putting that knowledge into praxis using micro controllers provided by our teacher. We are graded based upon how well we understood the subject, which we have to prove by completing the course tasks and using the learning goals. 
+More about me in the "Who am I" section. 
 
 **Evidence:** [Task Inspirations](#task-inspirations)
 

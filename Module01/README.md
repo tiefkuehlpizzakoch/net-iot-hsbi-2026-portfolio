@@ -15,6 +15,7 @@ Module description
 
 <a id="lg1"></a>
 ### LG1 — `<introduction>`
+Explain how this class works — learning goals as the contract, negotiable tasks, evidence in a portfolio — and start your own portfolio with a note on what you already know, what you expect, and who your pod is.
 
 I worked in collaboration with Maxim Sukhonosov. In this class the focus is fully on learning the basics of networking, getting to know the OSI model and putting that knowledge into praxis using micro controllers provided by our teacher. We are graded based upon how well we understood the subject, which we have to prove by completing the course tasks and using the learning goals. 
 More about me in the "Who am I" section. 
@@ -26,6 +27,8 @@ More about me in the "Who am I" section.
 
 Explain publish/subscribe with an MQTT broker: the star topology, hierarchical topics, wildcards, and why decoupling producers from consumers is what makes an IoT system maintainable.
 
+In MQTT's publish/subscribe model, devices never talk directly to each other but connect to a central broker in a star topology. Messages are published to hierarchical topics, allowing subscribers to use wildcards (like `+` or `#`) to easily filter and receive data from multiple sources. This setup completely decouples producers from consumers, making the IoT system highly maintainable since devices can be added or replaced without reconfiguring the rest of the network.
+
 **Evidence:** [Task Personal Profile](#task-personal-profile)
 
 <a id="lg3"></a>
@@ -33,12 +36,16 @@ Explain publish/subscribe with an MQTT broker: the star topology, hierarchical t
 
 Build Node-RED flows that subscribe and publish, turn a physical button into a remote actuator action, and render live telemetry as a gauge, a chart, and a wildcard aggregation.
 
+This was already answered in Taks 3-7.
+
 **Evidence:** [Task What is IoT](#task-what-is-iot)
 
 <a id="lg4"></a>
 ### LG4 — `<keyword>`
 
 Wire a digital 1-wire sensor, read its value over MQTT, and explain the declarative OTA loop (one line in setup.cpp → a fleet-wide deployment) and what it changes for a real fleet.
+
+Answered in Taks 6-7.
 
 **Evidence:** [Task Personal Profile](#task-personal-profile)
 
@@ -53,6 +60,8 @@ Critically analyze the ISO/OSI 7-layer model against real TCP/IP in IoT systems 
 ### LG6 — `<keyword>`
 
 Craft a system story that is concrete enough to pitch, spanning the computing continuum with named stakeholders, devices, and interfaces — and name the weakest link in it.
+
+Answered in task 10.
 
 **Evidence:** [Task Personal Profile](#task-personal-profile)
 

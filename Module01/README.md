@@ -14,7 +14,7 @@ Module description
 > **How to use the learning goals.** Copy the module's learning goals from the course workbook into the block below. Keep the `LG1`, `LG2`, … IDs and a one-word keyword. In each task, write `Proves: LG2` (or link to `[LG2](#lg2)`) so you can find the evidence quickly at checkpoint time. In the **Evidence** line under each goal, link to the task that proves it.
 
 <a id="lg1"></a>
-### LG1 — `<keyword>`
+### LG1 — `<introduction>`
 
 I worked in collaboration with Maxim Sukhonosov. In this class the focus is fully on learning the basics of networking, getting to know the OSI model and putting that knowledge into praxis using micro controllers provided by our teacher. We are graded based upon how well we understood the subject, which we have to prove by completing the course tasks and using the learning goals. 
 More about me in the "Who am I" section. 

@@ -82,6 +82,14 @@ Task 6: the cable is needless because the data was transfered to the stick, allo
 
 Task7: If each pod had invented its own topic names, temp would break, making it impossible to aggregate all sensor data from the room into a single, unified chart or heatmap.
 
+Task 10:
+Person: Malik Yilmaz, field engineer, 7:15 a.m., walking into a district-heating substation.
+Stake: He can't tell whether the temperature reading is real or a dead sensor — and a burst pipe at −127 °C would look the same on the dashboard.
+Continuum: M5StickC (DS18B20 on GPIO32) —Wi-Fi 802.11→ classroom AP —IPv4/TCP→ Mosquitto broker at 192.168.114.1:1883 —MQTT→ Node-RED container —WebSocket→ browser gauge + +/temp chart.
+
+Weakest link: The broker (or the laptop running Node-RED). If the broker dies, the dashboard keeps showing the last value with no warning — it lies. Fix: Last Will + a stale-data indicator (Module 4).
+
+One sentence: "A basement sensor can tell the control room it's overheating without sending the reading through the internet — and the dashboard should say 'I don't know' when the link drops, not show yesterday's number."
 ## Task Inspirations
 
 **Proves:** [LG1](#lg1)

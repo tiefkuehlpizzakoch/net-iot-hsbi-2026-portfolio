@@ -54,7 +54,7 @@ Answered in Taks 6-7.
 
 Critically analyze the ISO/OSI 7-layer model against real TCP/IP in IoT systems (referencing RFC 3439 and RFC 1958), and quantify header overhead from a capture taken at the edge — the router, an ESP32 tap, or a provided dump — stating every assumption.
 
-Completed in tasks 1-2.
+Completed in tasks 1-2. There we discussed the OSI Modell and why the TCP 4 layer Modell is preferred over the 7 Layer model, especially in every day use.
 
 **Evidence:** [Task Personal Profile](#task-personal-profile)
 

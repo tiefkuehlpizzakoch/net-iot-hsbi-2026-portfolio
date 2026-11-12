@@ -16,7 +16,7 @@ Module description
 <a id="lg1"></a>
 ### LG1 — `<keyword>`
 
-Explain how this class works — learning goals as the contract, negotiable tasks, evidence in a portfolio — and start your own portfolio with a note on what you already know, what you expect, and who your pod is.
+I worked in collaboration with Maxim Sukhonosov. Explain how this class works — learning goals as the contract, negotiable tasks, evidence in a portfolio — and start your own portfolio with a note on what you already know, what you expect, and who your pod is.
 
 **Evidence:** [Task Inspirations](#task-inspirations)
 

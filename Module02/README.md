@@ -42,6 +42,7 @@ have to add 1 question i still have
 ## Router baseline — model, OpenWrt version, LAN/WAN addresses, MACs, SSH access, extroot status, broker status, open ports. No passwords, no eduroam credentials.
 
 ## Study log — the running log: the theory you actually needed, the commands that surprised you, and the LLM answers you checked. This is not an essay and not a separate study phase.
+We 
 
 ## Discussion log — one line per discussion: who listened, what they asked, what you changed. This is personal; the shared study log is still one per pod.
 
@@ -76,6 +77,27 @@ It is [here](https://github.com/partner/iot-portfolio/Module02/README.md#task-2)
 ## Task 3 — `<short title>`
 
 **Proves:** [LG3](#lg3)
+
+## Round 1:
+
+## Round 2:
+
+## Round 3:
+
+## Round 4:
+
+## Round 5:
+
+## Round 6:
+
+## Round 7:
+
+## Round 8:
+
+## Round 9:
+1. Release Story: "OpenWrt ​is a highly extensible ​GNU/​Linux ​distribution for embedded devices ​(typically wireless routers). Unlike many other distributions for these routers, OpenWrt ​is built from the ground up to be a full-featured, easily modifiable operating system for your router. In practice, this means that you can have all the features you need with none of the bloat, powered by a Linux kernel ​that's more recent than most other distributions."
+
+
 
 ...
 

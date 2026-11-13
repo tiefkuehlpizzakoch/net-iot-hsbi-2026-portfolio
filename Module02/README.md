@@ -33,6 +33,28 @@ Flash, configure, administer, and secure an OpenWrt edge router via SSH and the 
 ### LG4 — `<keyword>`
 Capture traffic at the choke point with tcpdump on the router, and read the dump with Wireshark, tshark, or as text — without needing a second network adapter.
 
+
+### Pre-study-check-in
+have to add 1 question i still have
+
+## Network plan — the sketch, the subnet calculation, the SSID/channel, and the pod ID.
+
+## Router baseline — model, OpenWrt version, LAN/WAN addresses, MACs, SSH access, extroot status, broker status, open ports. No passwords, no eduroam credentials.
+
+## Study log — the running log: the theory you actually needed, the commands that surprised you, and the LLM answers you checked. This is not an essay and not a separate study phase.
+
+## Discussion log — one line per discussion: who listened, what they asked, what you changed. This is personal; the shared study log is still one per pod.
+
+## Vocabulary tracker — the Module 2 vocabulary table, copied with two extra columns: ✓ and Link / evidence. See the reference at the end for how to fill it.
+
+## Captures — the pcap or the tshark/tcpdump -A text, and what each protocol proves.
+
+## NAT and port forwarding — the rule, the two-sided capture, and the explanation.
+
+## Take it home — the upstream switch and the evidence that the router still works.
+
+## Story seeds — optional: the odd bits worth turning into a story later.
+
 **Evidence:** [Task 3](#task-3)
 
 <a id="task-1"></a>

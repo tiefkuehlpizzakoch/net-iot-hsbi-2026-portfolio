@@ -13,6 +13,26 @@ We are going to show here notes for Task 1, 2, 3, 4, and 5 to prove
 
 Configure IPv4 addressing, CIDR subnetting, default gateways, and routing tables.
 
+[rein2max@DIVA OpenWRT auf Cudy einrichten]$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: wlo1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether d0:3c:1f:0e:6a:4b brd ff:ff:ff:ff:ff:ff
+    altname wlp3s0
+    altname wlxd03c1f0e6a4b
+    inet 192.168.14.103/24 brd 192.168.14.255 scope global dynamic noprefixroute wlo1
+       valid_lft 43195sec preferred_lft 43195sec
+    inet6 fd6e:2ff7:e75b::257/128 scope global dynamic noprefixroute 
+       valid_lft 43194sec preferred_lft 43194sec
+    inet6 fd6e:2ff7:e75b:0:a590:93fa:1013:de38/64 scope global dynamic noprefixroute 
+       valid_lft 5394sec preferred_lft 2694sec
+    inet6 fe80::d7c3:9c8:8cd:f092/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+
 **Evidence:** [Task 1](#task-1)
 
 <a id="lg2"></a>

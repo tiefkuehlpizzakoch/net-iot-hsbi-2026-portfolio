@@ -11,21 +11,27 @@ We are going to show here notes for Task 1, 2, 3, 4, and 5 to prove
 <a id="lg1"></a>
 ### LG1 — `<keyword>`
 
-<copy the goal here>
+Configure IPv4 addressing, CIDR subnetting, default gateways, and routing tables.
 
 **Evidence:** [Task 1](#task-1)
 
 <a id="lg2"></a>
 ### LG2 — `<keyword>`
 
-<copy the goal here>
+Inspect and diagnose the core IP plumbing services: ARP, DHCP (DORA), DNS, and NAT.
 
 **Evidence:** [Task 2](#task-2)
 
 <a id="lg3"></a>
 ### LG3 — `<keyword>`
 
-<copy the goal here>
+Flash, configure, administer, and secure an OpenWrt edge router via SSH and the LuCI web interface — from factory firmware to a working pod LAN with a WAN uplink (eduroam, phone tether, or the class Wi-Fi).
+
+**Evidence:** [Task 3](#task-3)
+
+<a id="lg4"></a>
+### LG4 — `<keyword>`
+Capture traffic at the choke point with tcpdump on the router, and read the dump with Wireshark, tshark, or as text — without needing a second network adapter.
 
 **Evidence:** [Task 3](#task-3)
 

@@ -8,11 +8,12 @@ We are going to show here notes for Task 1, 2, 3, 4, and 5 to prove
 
 > **How to use the learning goals.** Copy the module's learning goals from the course workbook into the block below. Keep the `LG1`, `LG2`, … IDs and a one-word keyword. In each task, write `Proves: LG2` (or link to `[LG2](#lg2)`) so you can find the evidence quickly at checkpoint time. In the **Evidence** line under each goal, link to the task that proves it.
 
+## Learning Goals
+
 <a id="lg1"></a>
-### LG1 — `<keyword>`
+### LG1 — `<IP-config>`
 
-Configure IPv4 addressing, CIDR subnetting, default gateways, and routing tables.
-
+<Configure IPv4 addressing, CIDR subnetting, default gateways, and routing tables.>
 [rein2max@DIVA OpenWRT auf Cudy einrichten]$ ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -33,25 +34,33 @@ Configure IPv4 addressing, CIDR subnetting, default gateways, and routing tables
     inet6 fe80::d7c3:9c8:8cd:f092/64 scope link noprefixroute 
        valid_lft forever preferred_lft forever
 
+
 **Evidence:** [Task 1](#task-1)
 
 <a id="lg2"></a>
-### LG2 — `<keyword>`
+### LG2 — `<IP-plumbing-services>`
 
-Inspect and diagnose the core IP plumbing services: ARP, DHCP (DORA), DNS, and NAT.
+<Inspect and diagnose the core IP plumbing services: ARP, DHCP (DORA), DNS, and NAT.>
 
-**Evidence:** [Task 2](#task-2)
+> We have successfully done our ssh configuration
+
+**Evidence:** [./pictures/Dfhoverlay.jpg](#task-2)
 
 <a id="lg3"></a>
-### LG3 — `<keyword>`
+### LG3 — `<routing>`
 
-Flash, configure, administer, and secure an OpenWrt edge router via SSH and the LuCI web interface — from factory firmware to a working pod LAN with a WAN uplink (eduroam, phone tether, or the class Wi-Fi).
+<Flash, configure, administer, and secure an OpenWrt edge router via SSH and the LuCI web interface — from factory firmware to a working pod LAN with a WAN uplink (eduroam, phone tether, or the class Wi-Fi).>
+
+> We have successfully configured the router
 
 **Evidence:** [Task 3](#task-3)
 
 <a id="lg4"></a>
-### LG4 — `<keyword>`
-Capture traffic at the choke point with tcpdump on the router, and read the dump with Wireshark, tshark, or as text — without needing a second network adapter.
+### LG4 - `<capture-traffic>`
+
+<Capture traffic at the choke point with tcpdump on the router, and read the dump with Wireshark, tshark, or as text — without needing a second network adapter.
+
+> We have successfully done it, proof is shown via the screenshot
 
 
 ### Pre-study-check-in

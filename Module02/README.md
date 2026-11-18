@@ -60,7 +60,8 @@ We are going to show here notes for Task 1, 2, 3, 4, and 5 to prove
 
 <Capture traffic at the choke point with tcpdump on the router, and read the dump with Wireshark, tshark, or as text — without needing a second network adapter.
 
-> We have successfully done it, proof is shown via the screenshot
+> We have successfully done it, proof is shown via the screenshot: <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ab29c13f-2017-4b63-a08f-684ca837d8cc" />
+
 
 
 ### Pre-study-check-in

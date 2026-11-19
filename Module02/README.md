@@ -65,7 +65,9 @@ We are going to show here notes for Task 1, 2, 3, 4, and 5 to prove
 
 <img width="1688" height="817" alt="image" src="https://github.com/user-attachments/assets/43bb59d3-8556-4143-957d-b590c5ace991" />
 
+## Study Log
 
+> During the router setup we have discovered, that it is not a good idea to flash the transition firmware twice, as it breaks the router configuration.
 
 ### Pre-study-check-in
 have to add 1 question i still have
@@ -117,21 +119,150 @@ Downloaded the necessary firmware to be flashed onto the router.
 ## Round 2:
 We have successfully extended the routers storage using a USB flash drive, so that more packages can be installed. 
 
-## Round 3:
+# Round 3
 
-## Round 4:
+> We have successfully set up our connection to eduroam so that we can have an access to Wi-Fi.
+> We can also connect to our private network according to the information found in module 2, Path C; Source: <a href="https://github.com/iotempire/iotempire-teaching/blob/main/full-classes/hsbi-networking-iot-10d/modules/02-local-networking-and-gateways.md">Module 2</a>
 
-## Round 5:
-Proof LG 4
+# Round 4
 
-## Round 6:
+> We have successfully changed the network interface from 192.168.0.1 to 192.168.14.1/24 and tested the connection to the network interface WIRELESSLY
 
-## Round 7:
+# Round 5
 
-## Round 8:
+> Proves LG4: <a href="lg4">SOURCE</a>. We have also created a screenshot of tcpdump located at: ./pictures/tcpdump.png
 
-## Round 9:
-1. Release Story: "OpenWrt ​is a highly extensible ​GNU/​Linux ​distribution for embedded devices ​(typically wireless routers). Unlike many other distributions for these routers, OpenWrt ​is built from the ground up to be a full-featured, easily modifiable operating system for your router. In practice, this means that you can have all the features you need with none of the bloat, powered by a Linux kernel ​that's more recent than most other distributions."
+# Round 6
+
+> 1. /26 calculation
+> 2^(32 - 26) = 2^6 = 64 - the total amount of addresses  <--
+> Usable hosts: 64 - 2 (Network AND Broadcast) = 62         |
+> Block size: 256 - 192 = 64                                |
+> Network Address: 192.168.14.0                             |
+> Broadcast: 192.168.14.63 --------Proves--------------------
+> Usable range is naturally then from 192.168.14.1 to 192.168.14.62
+
+> /28 calc is naturally then
+> total 16; usable hosts 14; block size 16; network address at 0 broadcast at 15, and the range is from 1 to 14
+> Our broker address however remains unchanged, hence it doesnt really matter if the subnet is /24 or /26 or /28
+
+
+# Round 7
+
+> The interaction could work if only I had a different client set up. The test screenshot can be found as tcpdump-interaction.png and the setup at the
+> router interface and Konnichiwa.png. Yet I am connected to the private network and everything works fine.
+
+# Round 8
+
+> Our router works just fine at home - instead of setting up the connection to eduroam, it was connected to the private network as seen in some screenshots in previous rounds. 
+
+> Here is an example of the prepared ssh:
+[rein2max@DIVA ~]$ ssh root@192.168.14.1
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+root@192.168.14.1's password: 
+
+
+BusyBox v1.37.0 (2026-11-05 11:43:20 UTC) built-in shell (ash)
+
+  _______                     ________        __
+ |       |.-----.-----.-----.|  |  |  |.----.|  |_
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+ |_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+ -----------------------------------------------------
+ OpenWrt 25.12.6, r33311-981c978eff Dave's Guitar
+ -----------------------------------------------------
+
+ OpenWrt recently switched to the "apk" package manager!
+
+ OPKG Command           APK Equivalent      Description
+ ------------------------------------------------------------------
+ opkg install <pkg>     apk add <pkg>       Install a package
+ opkg remove <pkg>      apk del <pkg>       Remove a package
+ opkg upgrade           apk upgrade         Upgrade all packages
+ opkg files <pkg>       apk info -L <pkg>   List package contents
+ opkg list-installed    apk info            List installed packages
+ opkg update            apk update          Update package lists
+ opkg search <pkg>      apk search <pkg>    Search for packages
+ ------------------------------------------------------------------
+
+For more information visit:
+https://openwrt.org/docs/guide-user/additional-software/opkg-to-apk-cheatsheet
+
+root@OpenWrt:~# ubus call system board
+{
+        "kernel": "6.12.112",
+        "hostname": "OpenWrt",
+        "system": "MediaTek MT7628AN ver:1 eco:2",
+        "model": "Cudy TR1200 v1",
+        "board_name": "cudy,tr1200-v1",
+        "rootfs_type": "squashfs",
+        "release": {
+                "distribution": "OpenWrt",
+                "version": "25.12.6",
+                "firmware_url": "https://downloads.openwrt.org/",
+                "revision": "r33311-981c978eff",
+                "target": "ramips/mt76x8",
+                "description": "OpenWrt 25.12.6 r33311-981c978eff",
+                "builddate": "1792273538"
+        }
+}
+root@OpenWrt:~# 192.168.14.1/26
+-ash: 192.168.14.1/26: not found
+root@OpenWrt:~# ip addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN qlen 1000
+    link/ether d4:0d:ab:52:a4:20 brd ff:ff:ff:ff:ff:ff
+4: br-lan: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP qlen 1000
+    link/ether d4:0d:ab:52:a4:20 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.14.1/26 brd 192.168.14.63 scope global br-lan
+       valid_lft forever preferred_lft forever
+    inet6 fd6e:2ff7:e75b::1/60 scope global noprefixroute 
+       valid_lft forever preferred_lft forever
+    inet6 fe80::d60d:abff:fe52:a420/64 scope link 
+       valid_lft forever preferred_lft forever
+5: eth0.1@eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue master br-lan state LOWERLAYERDOWN qlen 1000
+    link/ether d4:0d:ab:52:a4:20 brd ff:ff:ff:ff:ff:ff
+6: eth0.2@eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state LOWERLAYERDOWN qlen 1000
+    link/ether d4:0d:ab:52:a4:20 brd ff:ff:ff:ff:ff:ff
+7: phy0-ap0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-lan state UP qlen 1000
+    link/ether d4:0d:ab:52:a4:20 brd ff:ff:ff:ff:ff:ff
+11: phy1-sta0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP qlen 1000
+    link/ether d4:0d:ab:52:a4:22 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.0.200/24 brd 192.168.0.255 scope global phy1-sta0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::d60d:abff:fe52:a422/64 scope link 
+       valid_lft forever preferred_lft forever
+root@OpenWrt:~# ip link show br-lan
+4: br-lan: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP qlen 1000
+    link/ether d4:0d:ab:52:a4:20 brd ff:ff:ff:ff:ff:ff
+root@OpenWrt:~# df -h
+Filesystem                Size      Used Available Use% Mounted on
+/dev/root                 7.0M      7.0M         0 100% /rom
+tmpfs                    60.0M    300.0K     59.7M   0% /tmp
+/dev/sda1                 7.2G      2.0M      6.8G   0% /overlay
+overlayfs:/overlay        7.2G      2.0M      6.8G   0% /
+tmpfs                   512.0K         0    512.0K   0% /dev
+/dev/mtdblock6            6.7M    376.0K      6.3M   5% /rwm
+root@OpenWrt:~# ss -tlnp
+-ash: ss: not found
+root@OpenWrt:~# date
+Thu Nov 19 20:08:06 CET 2026
+
+> We are successfully prepared for the next Module as everything seems to be in order
+
+# Round 9
+
+> 1. OpenWrt started in January 2004 from Linksys WRT54G GPL sources and expanded in 2005 with a custom buildroot2 system based on official GNU Linux kernel sources.
+> The project exists to replace proprietary vendor code with free tools for flashing, wireless configuration, and VLAN control, giving users full ownership of their hardware.
+> 2. Device: Cudy TR1200 v1. Supported release 25.12.2. Install method: TFTP only. DFS channels are not supported on the 5 Ghz MT7613 radio chip.
 
 
 

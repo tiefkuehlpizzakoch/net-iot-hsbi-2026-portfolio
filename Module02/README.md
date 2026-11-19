@@ -112,14 +112,17 @@ It is [here](https://github.com/partner/iot-portfolio/Module02/README.md#task-2)
 **Proves:** [LG3](#lg3)
 
 ## Round 1:
+Downloaded the necessary firmware to be flashed onto the router. 
 
 ## Round 2:
+We have successfully extended the routers storage using a USB flash drive, so that more packages can be installed. 
 
 ## Round 3:
 
 ## Round 4:
 
 ## Round 5:
+Proof LG 4
 
 ## Round 6:
 

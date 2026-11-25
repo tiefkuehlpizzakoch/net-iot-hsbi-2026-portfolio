@@ -5,7 +5,7 @@
 
 
 ## Study Log
-Tailscale/Headscale and NetBird give you a managed or self-hosted control plane with automatic key distribution, identity-provider login, and built-in relay fallback, which Nebula leaves you to manage through manual certificate signing and lighthouse configuration. They also offer smoother cross-platform onboarding and zero-configuration NAT traversal out of the box, whereas Nebula requires you to understand and operate the CA, certificates, and static host maps yourself. This class runs its own CA instead because Nebula's trust model starts with the certificate authority: whoever holds the CA key controls every host's identity, and signing, distributing, and revoking certificates by hand is the point—it teaches you how the overlay's trust actually works before you can appreciate what the managed tools automate
+Tailscale/Headscale and NetBird give you a managed or self-hosted control plane with automatic key distribution, identity-provider login, and built-in relay fallback, which Nebula leaves you to manage through manual certificate signing and lighthouse configuration. They also offer smoother cross-platform onboarding and zero-configuration NAT traversal out of the box, whereas Nebula requires you to understand and operate the CA, certificates, and static host maps yourself. This class runs its own CA instead because Nebula's trust model starts with the certificate authority: whoever holds the CA key controls every host's identity, and signing, distributing, and revoking certificates by hand is the point—it teaches you how the overlay's trust actually works before you can appreciate what the managed tools automate.
 
 # Task 1
 

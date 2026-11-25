@@ -5,6 +5,7 @@
 
 
 ## Study Log
+Tailscale/Headscale and NetBird give you a managed or self-hosted control plane with automatic key distribution, identity-provider login, and built-in relay fallback, which Nebula leaves you to manage through manual certificate signing and lighthouse configuration. They also offer smoother cross-platform onboarding and zero-configuration NAT traversal out of the box, whereas Nebula requires you to understand and operate the CA, certificates, and static host maps yourself. This class runs its own CA instead because Nebula's trust model starts with the certificate authority: whoever holds the CA key controls every host's identity, and signing, distributing, and revoking certificates by hand is the point—it teaches you how the overlay's trust actually works before you can appreciate what the managed tools automate
 
 # Task 1
 
@@ -17,7 +18,19 @@
 > the proof can be found at: ./pictures/
 
 # Task 4
+An overlay is a virtual encrypted network on top of the normal internet, where machines use private addresses and talk as if they were on the same LAN. 
+The lighthouse is just an address book: it tells peers where to find each other, and only passes traffic through itself when two peers cannot connect 
+directly (for example, one is behind NAT or CGNAT). The instructor set up a public lighthouse, a CA, and one certificate per machine, with each config 
+pointing at the lighthouse; to do it for another site, repeat the same steps: lighthouse, certificates, config entries, client installed.
 
+to reach the sculpture and the dashboard without opening a hole in the museum firewall, each device that needs access runs a client that 
+initiates an encrypted tunnel outward—no inbound port is opened on the museum firewall. The client on the sculpture side and the client 
+on the dashboard side both check in with a public "address book" (the lighthouse), which tells them where the other side appears to be, 
+and then they attempt a direct encrypted conversation. You can now see the sculpture feed and the dashboard from campus, home, or mobile, 
+which you could not do before without a VPN or a fixed IP. Nothing in the museum network changed: firewall rules, internal addresses, 
+and topology are untouched, and no network administrator had to reconfigure anything. One limit you will notice is that both ends must run 
+the client—if the dashboard side does not have it, you see nothing. Also, if the two ends cannot connect directly and traffic goes through 
+the relay, it will be noticeably slower than a path on the same LAN.
 > find at: ./pictures
 
 # Task 5

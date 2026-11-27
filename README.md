@@ -51,7 +51,7 @@
 
 Author: <replace these pointy brackets with your full name>
 
-My partner is <replace these pointy brackets with their full name>, [portfolio link](https://github.com/partner/iot-portfolio)
+My partner is Maksym Sukhonosov, https://github.com/partner/iot-portfolio)](https://github.com/Rein2Max/iot-test
 
 In my team for the final project, I also had the following members:
 - <replace these pointy brackets with their full name>, [portfolio link](https://github.com/partner/iot-portfolio)

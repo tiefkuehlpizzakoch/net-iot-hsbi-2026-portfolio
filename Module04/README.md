@@ -9,7 +9,7 @@ Group: Shuofeng Liu, Max, Julius
 ## Learning Goals
 
 - [x] **LG1 — MQTT Mechanisms & Protocol Comparison**  
-  Explain the MQTT mechanisms — topic hierarchy, QoS levels, retained messages, and Last Will and Testament (LWT) — and place MQTT against CoAP and HTTP on the wire (transport, latency, and security posture).  
+  Explain the MQTT mechanisms — topic hierarchy, QoS levels, retained messages, and the Last Will and Testament — and place MQTT against CoAP and HTTP on the wire: what each costs in transport, latency, and security posture. The layer model itself is Module 1's job, not a second lecture here.  
   **Evidence:** [Task 1 — HTTP Endpoint](#task-1) (HTTP request/response baseline & coupling limits), [Task 2 — MQTT Deep Dive](#task-2) (topic tree, retain, QoS, LWT experiments), and [Study Log](#study-log) (MQTT vs. CoAP vs. HTTP comparison & security posture).
 
 - [x] **LG2 — Node-RED Command & Dashboard Flow**  

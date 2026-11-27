@@ -7,20 +7,19 @@ Group: Shuofeng Liu, Max, Julius
 <!-- Add links to the group members' portfolios when available. -->
 
 ## Learning Goals
-
-- [x] **LG1 — MQTT Mechanisms & Protocol Comparison**  
+**LG1 — MQTT Mechanisms & Protocol Comparison**  
   Explain the MQTT mechanisms — topic hierarchy, QoS levels, retained messages, and the Last Will and Testament — and place MQTT against CoAP and HTTP on the wire: what each costs in transport, latency, and security posture. The layer model itself is Module 1's job, not a second lecture here.  
   **Evidence:** [Task 1 — HTTP Endpoint](#task-1) (HTTP request/response baseline & coupling limits), [Task 2 — MQTT Deep Dive](#task-2) (topic tree, retain, QoS, LWT experiments), and [Study Log](#study-log) (MQTT vs. CoAP vs. HTTP comparison & security posture).
 
-- [x] **LG2 — Node-RED Command & Dashboard Flow**  
+**LG2 — Node-RED Command & Dashboard Flow**  
   Build a command-and-dashboard flow on your pod's Node-RED on the class cluster.  
   **Evidence:** [Task 1 — HTTP Endpoint](#task-1) (Node-RED HTTP endpoint and live temperature dashboard) and [Task 4 — Bridges](#task-4) (multi-protocol Node-RED bridge flows including a reverse command path).
 
-- [x] **LG3 — Event-Driven Python Integration**  
+**LG3 — Event-Driven Python Integration**  
   Write an event-driven integration service in Python on your own machine with paho-mqtt, and a small one in MicroPython on the router where the service fits.  
   **Evidence:** [Task 2 — MQTT Deep Dive](#task-2) (Python `paho-mqtt` 2.x publisher & LWT test client in `uv`) and [Task 4 — Bridges](#task-4) (event-driven integration and router command topic handling).
 
-- [x] **LG4 — Device Simulation & Decoupled Publisher Swap**  
+**LG4 — Device Simulation & Decoupled Publisher Swap**  
   Simulate a device before it exists — a fake AC unit with a temperature and an on/off HVAC — and then swap the simulation for another publisher without changing a line downstream.
   **Evidence:** [Task 1 — The Sender](#task-1) (initial simulated Python AC sender), [Task 2 — MQTT Deep Dive](#task-2) (migrating the sender from HTTP to MQTT without rewriting the dashboard logic), and [Task 4 — Bridges](#task-4) (swapping/adding publishers and external triggers with zero downstream changes).
 
